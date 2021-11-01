@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #353978;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.AddController">
+   <children>
+      <Label layoutX="353.0" layoutY="49.0" text="DICTIONARY" textFill="WHITE">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#switchToLookUp" stylesheets="@navigation-button.css" text="Tra từ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="150.0" mnemonicParsing="false" onAction="#switchToOnlineDict" stylesheets="@navigation-button.css" text="Dịch văn bản" />
+      <Button layoutX="60.0" mnemonicParsing="false" style="-fx-border-width: 0 0 2 0; -fx-border-color: #B0C4DE;" stylesheets="@navigation-button.css" text="Quản lý từ" />
+      <Label alignment="CENTER_RIGHT" layoutX="285.0" layoutY="142.0" text="Từ" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="225.0" layoutY="306.0" text="Giải thích" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="addEditButton" layoutX="471.0" layoutY="534.0" mnemonicParsing="false" onAction="#addOrEdit" stylesheets="@function-button.css" text="Thêm/Sửa">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Pane layoutX="324.0" layoutY="137.0" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 20px; -fx-border-color: #B0C4DE; -fx-border-radius: 15px; -fx-border-width: 3;">
+         <children>
+            <TextField fx:id="searchWordField" layoutX="9.0" layoutY="5.0" onKeyReleased="#editLabel" prefHeight="30.0" prefWidth="332.0" promptText="hello" style="-fx-background-color: white;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane layoutX="324.0" layoutY="298.0" prefHeight="211.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 20px; -fx-border-color: #B0C4DE; -fx-border-radius: 15px; -fx-border-width: 4;">
+         <children>
+            <TextArea fx:id="meaningField" layoutX="9.0" layoutY="6.0" prefHeight="199.0" prefWidth="332.0" promptText="câu chào" style="-fx-background-color: white; -fx-border-color: white;" stylesheets="@application.css">
+               <font>
+                  <Font size="15.0" />
+               </font></TextArea>
+         </children>
+      </Pane>
+      <Pane layoutX="324.0" layoutY="190.0" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 20px; -fx-border-color: #B0C4DE; -fx-border-radius: 15px; -fx-border-width: 3;">
+         <children>
+            <TextField fx:id="pronoucedField" layoutX="9.0" layoutY="5.0" prefHeight="30.0" prefWidth="332.0" promptText="həˈlō" style="-fx-background-color: white;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane layoutX="324.0" layoutY="244.0" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 20px; -fx-border-color: #B0C4DE; -fx-border-radius: 15px; -fx-border-width: 3;">
+         <children>
+            <TextField fx:id="partOfSpeechField" layoutX="9.0" layoutY="5.0" prefHeight="30.0" prefWidth="332.0" promptText="danh từ" style="-fx-background-color: white;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Label alignment="CENTER_RIGHT" layoutX="236.0" layoutY="195.0" text="Phát âm" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="248.0" layoutY="249.0" text="Loại từ" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="removeButton" layoutX="578.0" layoutY="534.0" mnemonicParsing="false" onAction="#removeWord" stylesheets="@function-button.css" text="Xóa">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="683.0" layoutY="144.0" text="(*)" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="683.0" layoutY="390.0" text="(*)" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="324.0" layoutY="512.0" text="(*) Bắt buộc" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="myLabel" layoutX="344.0" layoutY="118.0" textFill="#dbdbdb" />
+   </children>
+</AnchorPane>
