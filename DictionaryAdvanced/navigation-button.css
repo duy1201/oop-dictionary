@@ -1,0 +1,12 @@
+.button {
+    -fx-background-color: #353978;
+    -fx-text-fill: white;
+    -fx-font-family: Montserrat;
+    -fx-font-size: 15px;
+}
+
+.button:hover {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-opacity: 0.5;
+}
